@@ -1,3 +1,5 @@
+let array = [1, 1, 2, 3, 4, -51, 12, 12, 12, -51];
+
 function seq(array) {
 	let obj = {};
 	let current = 0, next = 0;
