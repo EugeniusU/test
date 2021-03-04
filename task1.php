@@ -1,6 +1,6 @@
 <?php
 
-require_once('news11.html');
+require_once('task1.html');
 
 $alph = getAlph();
 $str2 = text(300, $alph);
