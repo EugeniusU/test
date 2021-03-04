@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Test</title>
+<meta charset='utf-8'>
+</head>
+<body>
+
+<img src='' alt='image'>
+<iframe src=''></iframe>
+
+<script>
+  
+let img = document.querySelector('img');
+let iframe = document.querySelector('iframe');
+
+function ajax(link) {
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+//		console.log(xhr.responseText);
+
+		if (xhr.responseText.includes('data')) {
+				img.src = xhr.responseText;
+				iframe.src = xhr.responseText;
+		}
+		
+	};
+	xhr.open('GET', link, true);
+	xhr.send(null);
+}
+
+ajax('http://localhost/task2.php');
+
+</script>
+
+</body>
+</html>
